@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: *
+Disallow: /admin/
+Disallow: /generator/
+Disallow: /compare/*
+Disallow: /?redirect=*
+
+User-agent: Googlebot
+Allow: *.css
+Allow: *.js
+
+Host: hobby.od.ua
+Sitemap: http://hobby.od.ua/sitemap.xml

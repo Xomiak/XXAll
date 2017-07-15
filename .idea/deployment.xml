@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="XX">
+    <serverData>
+      <paths name="XX">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/new" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/new/captcha" />
+            <excludedPath path="/new/css" />
+            <excludedPath path="/new/favorit" />
+            <excludedPath path="/new/fonts" />
+            <excludedPath path="/new/images" />
+            <excludedPath path="/new/img" />
+            <excludedPath path="/new/includes" />
+            <excludedPath path="/new/js" />
+            <excludedPath path="/new/libs" />
+            <excludedPath path="/new/maps" />
+            <excludedPath path="/new/symphony" />
+            <excludedPath path="/new/system" />
+            <excludedPath path="/new/test" />
+            <excludedPath path="/new/upload" />
+            <excludedPath path="/new/application/cache" />
+            <excludedPath path="/new/application/third_party" />
+            <excludedPath path="/new/application/thumbs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/captcha" />
+            <excludedPath local="true" path="$PROJECT_DIR$/css" />
+            <excludedPath local="true" path="$PROJECT_DIR$/favorit" />
+            <excludedPath local="true" path="$PROJECT_DIR$/fonts" />
+            <excludedPath local="true" path="$PROJECT_DIR$/images" />
+            <excludedPath local="true" path="$PROJECT_DIR$/img" />
+            <excludedPath local="true" path="$PROJECT_DIR$/includes" />
+            <excludedPath local="true" path="$PROJECT_DIR$/js" />
+            <excludedPath local="true" path="$PROJECT_DIR$/libs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/maps" />
+            <excludedPath local="true" path="$PROJECT_DIR$/symphony" />
+            <excludedPath local="true" path="$PROJECT_DIR$/system" />
+            <excludedPath local="true" path="$PROJECT_DIR$/test" />
+            <excludedPath local="true" path="$PROJECT_DIR$/upload" />
+            <excludedPath local="true" path="$PROJECT_DIR$/application/cache" />
+            <excludedPath local="true" path="$PROJECT_DIR$/application/third_party" />
+            <excludedPath local="true" path="$PROJECT_DIR$/application/thumbs" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="new.xx">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="peony">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
+  </component>
+</project>
