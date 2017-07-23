@@ -1,0 +1,39 @@
+@charset "UTF-8";
+a { color: #ce9c67;}
+blockquote { border-left-color: #ce9c67;}
+.blog-share ul li a:hover { background: #ce9c67; border-color: #ce9c67;}
+.btn-primary { background: #ce9c67; border-color: #ce9c67;}
+.sub-heading:before { background: #ce9c67; }
+.social-media ul li a:hover { background: #ce9c67; border-color: #ce9c67;}
+.navbar-brand span { color: #ce9c67;}
+.header .navbar-nav li a:hover, .header .navbar-nav li.active a { background: #ce9c67;}
+.welcome h1 span { color: #ce9c67;}
+.welcome .button .btn:hover { background: #ce9c67; border-color: #ce9c67;}
+.progress .progress-bar,
+.progress .progress-bar::after { background: #ce9c67; }
+.brand-successfull-today .available-freelance span { color: #ce9c67;}
+.services-box .icon .icon-inner span { color: #ce9c67;}
+.services-box:hover h3::after { background: #ce9c67; }
+.feature-panel .feature-icon span {  color: #ce9c67;}
+.team-member h3 { color: #ce9c67;}
+.counter-box .icon span { color: #ce9c67;}
+.filters ul li a:hover, .filters ul li a.active { color: #ce9c67;}
+.blog-post .post-date { color: #ce9c67;}
+.blog-post h3 a:hover { color: #ce9c67;}
+.blog-footer ul li.read-more a { background: #ce9c67;}
+.blog-footer ul li a:hover { background: #ce9c67;}
+.btn-reply { background: #ce9c67;}
+.author-box { border-left-color: #ce9c67;}
+.pagination a:hover, .pagination span.current { background: #ce9c67;}
+.search-widget button { background: #ce9c67;}
+.recent-post-content h3 a:hover { color: #ce9c67;}
+.categories-widget ul li a:hover, .archive-widget ul li a:hover { color: #ce9c67;}
+.categories-widget ul li a:hover:before, .archive-widget ul li a:hover:before { color: #ce9c67;}
+.tag-widget a:hover { background: #ce9c67; border-color: #ce9c67;}
+.testimonial-info h3 span { color: #ce9c67;}
+.owl-dots .owl-dot span { border-color: #ce9c67;}
+.owl-dots .owl-dot span:hover, .owl-dots .active span { background: #ce9c67; border-color: #ce9c67;}
+.pricing-box.premium-price .pricing-head { background: #ce9c67; }
+.contact-info h3 { color: #ce9c67;}
+.latest-tweets ul li:after { color: #ce9c67;}
+.footer-nav ul li a:hover, .footer-nav ul li a:hover:after { color: #ce9c67;}

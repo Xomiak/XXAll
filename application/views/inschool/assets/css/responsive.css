@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/*------------------------*/
+
+
+/*       1. Screen Size (1280px)
+/*------------------------*/
+
+@media (max-width: 1280px) {
+    .owl-nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .owl-nav .owl-prev,
+    .owl-nav .owl-next {
+        margin: 0 10px;
+        position: relative;
+        top: inherit;
+    }
+    .owl-nav .owl-prev {
+        left: inherit;
+    }
+    .owl-nav .owl-next {
+        right: inherit;
+    }
+    .welcome h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .about-text-block {
+        padding: 40px;
+    }
+    .why-choose-text-block {
+        padding: 40px;
+    }
+    .why-choose-text-block h2 + p {
+        font-size: 18px;
+    }
+    .feature-panel {
+        margin-top: 30px;
+    }
+    .feature-panel {
+        padding-left: 60px;
+    }
+    .feature-panel .feature-icon span {
+        font-size: 36px;
+    }
+}
+@media (max-width: 1145px) {
+    .header .navbar-nav li a {
+        padding: 30px 4px;
+    }
+    .header .navbar-nav {
+        font-size: 14px;
+    }
+}
+
+
+/*------------------------*/
+
+
+/*       2. Screen Size (991px)
+/*------------------------*/
+
+@media (max-width:991px) {
+    .page-title {
+        font-size: 30px;
+    }
+    .welcome h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .welcome .desc {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .header .navbar-nav {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .header .navbar-nav li a {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .about-text-block {
+        padding: 30px;
+        position: relative;
+        top: inherit;
+        width: auto;
+        max-width: 90%;
+        margin: -20% auto 0;
+    }
+    .about-image-block {
+        margin-bottom: 0;
+    }
+    .profile-image {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .intro-text-block {
+        margin-left: 0;
+        padding: 30px;
+    }
+    .brand-successfull-today h2,
+    .why-choose-text-block h2 {
+        font-size: 30px;
+    }
+    .why-choose-text-block h2 + p {
+        font-size: 16px;
+    }
+    .google-map #map {
+        height: 320px;
+    }
+    .contact-form,
+    .contact-info {
+        margin-top: 60px;
+        padding: 20px;
+    }
+}
+
+
+/*------------------------*/
+
+
+/*       3. Screen Size (767px)
+/*------------------------*/
+
+@media (max-width:767px) {
+    h1 {
+        font-size: 30px;
+    }
+    section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .navbar-brand {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .header {
+        background: #202020;
+    }
+    .header.affix .navbar-nav li a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .welcome h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .welcome .hello {
+        font-size: 18px;
+    }
+    .welcome .type-text {
+        font-size: 20px;
+    }
+    .header .navbar-nav {
+        float: none;
+    }
+    .header .navbar-nav li a {
+        padding: 12px 15px;
+    }
+    .profile-image {
+        max-width: 240px;
+    }
+    .brand-successfull-today {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .brand-successfull-today h2,
+    .why-choose-text-block h2 {
+        font-size: 24px;
+    }
+    .why-choose-text-block {
+        padding: 30px;
+    }
+    .contact-form,
+    .contact-info {
+        margin-top: 30px;
+    }
+    .footer-main {
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+}
+
+
+/*------------------------*/
+
+
+/*       4. Screen Size (479px)
+/*------------------------*/
+
+@media (max-width:479px) {
+    .about-text-block {
+        max-width: inherit;
+        margin: 0;
+    }
+    .fun-facts div[class*="col"],
+    .portfolio div[class*="col"],
+    .contact div[class*="col"] {
+        float: none;
+        width: auto;
+    }
+}

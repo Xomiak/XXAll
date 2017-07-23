@@ -11,12 +11,12 @@ class Banners extends CI_Controller {
 		$this->load->model('Model_banners', 'mban');
 	}
 
-	function upload_banner($folder = 'banners') {
+	function upload_banner($folder = 'slides') {
 
 		//////
 		// Функция загрузки и обработки фото
 		if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/upload/' . $folder . '/')) {
-			mkdir($_SERVER['DOCUMENT_ROOT'] . '/upload/' . $folder . '/', 0777);
+			mkdir($_SERVER['DOCUMENT_ROOT'] . '/upload/' . $folder . '/', 0777, true);
 		}
 		$config['upload_path'] = 'upload/'.$folder;
 		$config['allowed_types'] = 'jpg|png|gif|jpe';

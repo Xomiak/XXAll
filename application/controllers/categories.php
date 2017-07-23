@@ -2,7 +2,7 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-require_once(X_PATH . '/application/thumbs/ThumbLib.inc.php');
+//require_once(X_PATH . '/application/thumbs/ThumbLib.inc.php');
 
 class Categories extends CI_Controller
 {
@@ -46,7 +46,7 @@ class Categories extends CI_Controller
         set_userdata('last_url', $_SERVER['REQUEST_URI']);
         isLogin();
 
-        $this->load->library('googlemaps');
+//        $this->load->library('googlemaps');
     }
 
     public function index()

@@ -176,6 +176,7 @@ $languagesCount = $this->model_languages->languagesCount(1);
                                                     echo ' selected'; ?>>Галерея
                                                 </option>
                                             </SELECT>
+                                            <div id="inp_type_text"></div>
                                         </div>
                                     </div>
 
