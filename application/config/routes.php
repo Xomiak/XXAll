@@ -416,6 +416,7 @@ $route['ajax/comment/(.*)']           = "ajax/comment/$1";
 $route['ajax/login']           = "ajax/login";
 $route['ajax/get_block/(.*)']           = "ajax/getBlock/$1";
 $route['ajax/send_mail']           = "ajax/send_mail";
+$route['ajax/send_mail_form']           = "ajax/send_mail_form";
 $route['ajax/setka/(.*)']           = "ajax/setka/$1";
 $route['ajax/cities/(.*)']           = "ajax/cities/$1";
 $route['ajax/getnextrows/(.*)']           = "ajax/getNextRows/$1";

@@ -40,7 +40,7 @@ function getReviewBlock($item, $class = 'col-md-4 col-sm-6 col-xs-12'){
             <div class="testimonial-info">
                 <div class="author-pic">
                     <?php if($item['image'] != '') { ?>
-                            <img src="<?=CreateThumb(350,350,$item['image'],'350x350')?>" alt="<?=$item['name']?>">
+                            <img src="<?=cropImage($item['image'],350,350);?>" alt="<?=$item['name']?>" />
                     <?php } else { ?>
                         <img src="/img/noavatar.png" alt="<?=$item['name']?>">
                     <?php } ?>

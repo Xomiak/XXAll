@@ -210,6 +210,7 @@ class AdminElementsTree
                     <td><a href="<?= $elemUrl ?>/" target="_blank"><?= $elemUrl ?>/</a></td>
 
                     <td><?= $elem['type'] ?></td>
+                    <td><?= $elem['icon_class'] ?></td>
                     <td><?= $elem['num'] ?></td>
                     <td>
                         <a href="/admin/categories/up/<?= $elem['id'] ?>/"><img src="<?=GENERAL_DOMAIN?>/img/uparrow.png" border="0"

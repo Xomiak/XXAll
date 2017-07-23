@@ -10,7 +10,8 @@
 
             <div class="form-group">
                 <label class="col-sm-2 control-label">
-                    Краткое описание:
+                    Краткое описание:<br />
+                    (не больше абзаца)
                 </label>
                 <div class="col-sm-8">
                     <textarea class="form-control ckeditor" type="text" id="inp_short_content<?=$langAdding?>" name="short_content<?=$langAdding?>"><?php if (isset($cat['short_content'.$langAdding])) echo $cat['short_content'.$langAdding]; elseif(isset($cat) && $language == $defaultLanguage) echo $cat['short_content'];  ?></textarea>
@@ -107,7 +108,7 @@
 
             <div class="form-group">
                 <label class="col-sm-2 control-label">
-                    SEO-текст:
+                    Основной текст:
                 </label>
                 <div class="col-sm-8">
                     <textarea class="form-control ckeditor" type="text" id="inp_seo<?=$langAdding?>" name="seo<?=$langAdding?>"><?php if (isset($cat['seo'.$langAdding])) echo $cat['seo'.$langAdding]; elseif(isset($cat) && $language == $defaultLanguage) echo $cat['seo']; ?></textarea>

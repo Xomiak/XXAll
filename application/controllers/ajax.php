@@ -13,6 +13,35 @@ class Ajax extends CI_Controller
         $this->load->model('Model_users', 'users');
     }
 
+    function send_mail_form(){
+        $message = '';
+        vd($_POST);
+        $to = getOption('admin_email');
+        if(isset($_POST['to']))
+            $to = post('to');
+        $subject = 'Письмо с сайта '.$_SERVER['SERVER_NAME'];
+        if(isset($_POST['subject']))
+            $subject = post('subject');
+        $params = post('params');
+        if($_POST){
+            foreach ($_POST as $key => $value){
+                if($key != 'params' && $key != 'to' && $key != 'subject'){
+                    $name = $key;
+                    if(isset($params[$name]))
+                        $name = $params[$name];
+                    $message .= '<strong>'.$name.'</strong>: '.post($key).'<br/>';
+                }
+            }
+            if($message){
+                loadHelper('mail');
+                echo $message;
+                //$result = mail_send($to, $subject, $message);
+                //if($result) echo 'ok';
+                //else echo 'error';
+            }
+        }
+    }
+
     public function login(){
         if(isset($_POST['json'])){              // ПРОБУЕМ АВТОРИЗИРОВАТЬСЯ, ЕСЛИ ПЕРЕДАНЫ ЗНАЧЕНИЯ
             $s_user = json_decode($_POST['json'], true);

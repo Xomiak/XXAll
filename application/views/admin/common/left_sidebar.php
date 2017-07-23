@@ -2,8 +2,8 @@
 $user = $this->model_users->getUserByLogin(userdata('login'));
 ?>
 <div class="static-sidebar-wrapper sidebar-midnightblue">
-    <div class="static-sidebar">
-        <div class="sidebar">
+    <div class="static-sidebar scroll-pane has-scrollbar">
+        <div class="sidebar scroll-content">
             <div class="widget stay-on-collapse" id="widget-welcomebox">
                 <div class="widget-body welcome-box tabular">
                     <div class="tabular-row">

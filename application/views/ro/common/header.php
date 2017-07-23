@@ -1,4 +1,5 @@
 <body>
+<?=getOption('google-analytics-code')?>
 	<?php if(isClientAdmin()) include(X_PATH."/application/views/admin/client/frontend_admin_panel.php"); ?>
     <!--========== HEADER ==========-->
     <header <?php if($_SERVER['REQUEST_URI'] != '/') echo ' id="auxiliary"';?> id="pageHeader" class="header navbar">

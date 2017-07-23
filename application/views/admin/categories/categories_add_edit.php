@@ -125,6 +125,14 @@ $languagesCount = $this->model_languages->languagesCount(1);
                                             </SELECT>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">
+                                            Class иконки:
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input id="inp_icon_class" class="form-control" type="text" name="icon_class" value="<?php if (isset($cat['icon_class'])) echo $cat['icon_class']; ?>" />
+                                        </div>
+                                    </div>
                                     <?php
                                     $date = date("Y-m-d");
                                     $time = date("H:i");

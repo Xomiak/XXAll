@@ -39,6 +39,7 @@
                                         <th>Название</th>
                                         <th>Путь</th>
                                         <th>Тип</th>
+                                        <th>Иконка</th>
                                         <th colspan="2">Позиция</th>
                                         <th>Шаблон</th>
                                         <th colspan="2" style="text-align: center; width: 100px">Действия</th>

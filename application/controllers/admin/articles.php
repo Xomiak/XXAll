@@ -270,7 +270,7 @@ class Articles extends CI_Controller
             $config['per_page'] = $per_page;
             $config['uri_segment'] = 3;
             $from = intval($this->uri->segment(3));
-            $page_number = $from / $per_page + 1;
+            $page_number = $from / ($per_page + 1);
             $this->pagination->initialize($config);
             $data['pager'] = $this->pagination->create_links();
 

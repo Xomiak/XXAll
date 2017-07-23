@@ -577,8 +577,6 @@ function createImageForOg($name, $description, $bgImage = false, $saveToFile = t
     }
 }
 
-
-
 function getImageForOg($name, $description, $saveToFile = true){
     $path = '/upload/articles/og/';
     $image_file = md5($name.$description) . '.png';

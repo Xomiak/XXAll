@@ -516,6 +516,8 @@ class Ajax extends CI_Controller
         }
     }
 
+
+
     function mailer($action)
     {
         $this->load->model('Model_mailer', 'mailer');
@@ -1056,4 +1058,10 @@ class Ajax extends CI_Controller
         }
 
     }
+
+/*    function send_mail_to_template()
+    {
+        $this->load->helper('inschool_helper');
+        send_mail_contacts();
+    }*/
 }

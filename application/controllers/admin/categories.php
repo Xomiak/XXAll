@@ -137,6 +137,7 @@ class Categories extends CI_Controller
             if(!$type) $type = 'articles';
 
             $dbins['num']               = $_POST['num'];
+            $dbins['icon_class']        = post('icon_class');
             $dbins['parent']            = $_POST['parent'];
             $dbins['template']          = $_POST['template'];
             $dbins['content_template']  = $_POST['content_template'];
@@ -260,6 +261,7 @@ class Categories extends CI_Controller
             if (isset($_POST['show_in_menu']) && $_POST['show_in_menu'] == true)
                 $dbins['show_in_menu'] = 1;
 
+            $dbins['icon_class']        = post('icon_class');
             $dbins['num']               = $_POST['num'];
             $dbins['parent']            = $_POST['parent'];
             $dbins['template']          = $_POST['template'];

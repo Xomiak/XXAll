@@ -1,13 +1,6 @@
 <?php
 class Model_images extends CI_Model {
-        
-        function getAllImages($login)
-        {
-		$user = $this->db->where('login',$login)->get('users')->result_array();
-		if(!$user) return false;
-		else return $user[0];
-        }
-	
+
 	function getByArticleId($article_id, $active = -1, $type = false)
 	{
 		if($active != -1) $this->db->where('active', $active);
@@ -44,22 +37,6 @@ class Model_images extends CI_Model {
 		return $this->db->get('images')->result_array();
 	}
 
-	function getNewNumForArticle($article_id)
-	{
-		$this->db->where('article_id', $article_id);
-		$this->db->order_by('num', 'DESC');
-		$this->db->limit(1);
-		$img = $this->db->get('images')->result_array();
-		$num = 0;
-		if($img)
-		{
-			$num = $img[0]['num'] + 1;
-		}
-		return $num;
-	}
-	
-
-	
 	function getById($id)
 	{
 		$this->db->where('id', $id);

@@ -92,7 +92,6 @@
                                     <tbody>
                                     <?php
                                     //vd($options);
-                                    vd($options);
                                     $count = count($options);
                                     for ($i = 0; $i < $count; $i++) {
                                         $option = $options[$i];

@@ -1,14 +1,14 @@
-<?=getHead()?>
-<?=getHeader('main')?>
+<?= getHead() ?>
+<?= getHeader('main') ?>
 <?php
 $mArticles = getModel('articles');
 ?>
-<?=getOption('main_1_hero')?>
+<?= getOption('main_1_hero') ?>
 
     <!--========== MAIN CONTENT ==========-->
     <main id="mainContent">
         <!-- About Us -->
-        <?=getOption('about_us')?>
+        <?= getOption('about_us') ?>
         <!-- End of About Us -->
         <!-- Let's Make Your Brand Successfull Today -->
         <!-- <section class="brand-successfull-today parallax dark">
@@ -19,12 +19,12 @@ $mArticles = getModel('articles');
         </section> -->
         <!-- End of Let's Make Your Brand Successfull Today -->
         <!-- Services -->
-        <!-- <section id="services" class="services parallax light" style="background-image: url('<?=getOption('parallax-bg')?>');">
-            <?=getOption('services')?>
+        <!-- <section id="services" class="services parallax light" style="background-image: url('<?= getOption('parallax-bg') ?>');">
+            <?= getOption('services') ?>
         </section> -->
         <!-- End of Services -->
         <!-- Why Choose Us -->
-        <?=getOption('why_choose_us')?>
+        <?= getOption('why_choose_us') ?>
         <!-- End of Why Choose Us -->
         <!-- Team -->
         <section id="team" class="team">
@@ -36,12 +36,12 @@ $mArticles = getModel('articles');
                         <?php
                         $team = $mArticles->getArticlesByCategory(23, -1, -1, 1);
                         loadHelper(TEMPLATE);
-                        if($team){
-                            foreach ($team as $value){
+                        if ($team) {
+                            foreach ($team as $value) {
                                 echo getTeamBlock($value);
                             }
                         }
-                        //vd($team);
+
                         ?>
                     </div>
                 </div>
@@ -49,54 +49,148 @@ $mArticles = getModel('articles');
         </section>
         <!-- End of Team -->
         <!-- Fun Facts (CounterUp)-->
-        <?=getOption('6_fun_facts')?>
+        <?= getOption('6_fun_facts') ?>
         <!-- End of Fun Facts (CounterUp)-->
+
+
         <!-- Work (Portfolio) -->
-        <section id="portfolio" class="portfolio">
-            <div class="container-fluid">
+        <!--        <section id="portfolio" class="portfolio">-->
+        <section id="services" class="services parallax light">
+            <div class="container">
                 <h2 class="heading text-center">Что мы делаем?</h2>
                 <div class="grid">
                     <div class="row">
                         <?php
-                        $uslugi = $this->model_categories->getCategories(1,'products');
+                        $uslugi = $this->model_categories->getCategories(1, 'products');
                         //var_dump($uslugi);
-                        if($uslugi){
-                            foreach ($uslugi as $item){
+                        if ($uslugi) {
+                            foreach ($uslugi as $item) {
                                 ?>
-                                <div class="col-md-3 col-sm-4 col-xs-6 item ">
-                                    <?php if($item['image'] != '') { ?>
-                                        <img src="<?=cropImage($item['image'],600,600);?>" alt="<?=$item['name']?>" />
-                                    <?php } else { ?>
-                                        <img src="http://placehold.it/600x600" alt="<?=$item['name']?>" />
-                                    <?php } ?>
-                                    <a href="<?=getFullUrl($item)?>">
-                                        <div class="project-content">
-                                            <div class="inner">
-                                                <h3 class="text-center"><?=$item['name']?></h3>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+
+                                    <div class="services-box js-height">
+                                        <a href="<?= getFullUrl($item) ?>">
+                                            <div class="icon">
+                                                <div class="icon-inner">
+                                                    <span class="<?= $item['icon_class'] ?>"></span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                            <h3 class="text-center"><?= $item['name'] ?></h3>
+                                        </a>
+                                        <p class="text-center"><?= $item['short_content'] ?></p>
+                                    </div>
+
                                 </div>
                                 <?php
                             }
                         }
                         ?>
-
-
                     </div>
                 </div>
             </div>
         </section>
         <!-- End of Work (Portfolio) -->
-        <!-- Blog  -->
 
-        <!-- End of Blog  -->
-        <!-- Testimonials -->
+        <section class="pricing" id="specials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="pricing-box basic-price text-center">
+                            <div class="pricing-head">
+                                <div class="pricing-plan">ПРОМОБОРД! 150 грн. / промочас!</div>
 
-        <!-- End of Testimonials -->
-        <!-- Pricing -->
+                                <div class="fees"><!--<span class="value">30</span>--> КРЕАТИВНО! МОБИЛЬНО!
+                                </div>
+                            </div>
 
-        <section id="specials" class="pricing">
+                            <div class="pricing-content">
+                                <ul>
+                                    <li>Эксклюзивная услуга в Одессе</li>
+                                    <li>Человек-лайтбокс</li>
+                                    <li>Ярко, стильно, эффективно!</li>
+                                    <!--<li>Bootstrap Framework</li>
+                                    <li>Pricing is for 5 Vert</li>
+                                    <li>CSS3 & jQuery Powered</li> -->
+                                </ul>
+                            </div>
+
+                            <div class="pricing-footer"><a class="btn btn-primary" href="#contact">ЗАКАЗАТЬ!</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="pricing-box standard-price text-center">
+                            <div class="pricing-head">
+                                <div class="pricing-plan">-75 % до конца Августа!</div>
+
+                                <div class="fees"><!--<span class="value">50</span>-->ТЕЛЕНЕДЕЛЯ! ЭТО ВЫГОДНО!</div>
+                            </div>
+
+                            <div class="pricing-content">
+                                <ul>
+                                    <li>Журнал для всей семьи Теленеделя!</li>
+                                    <li>Небывалая распродажа рекламных площадок с 1 по 31 августа!</li>
+                                    <!-- <li>Bootstrap Framework</li>
+                                    <li>Pricing is for 5 Vert</li>
+                                    <li>CSS3 & jQuery Powered</li> -->
+                                </ul>
+                            </div>
+
+                            <div class="pricing-footer"><a class="btn btn-primary" href="#contact">ЗАКАЗАТЬ!</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="pricing-box premium-price text-center">
+                            <div class="pricing-head">
+                                <div class="pricing-plan">Ваша реклама готова в течении одного дня</div>
+
+                                <div class="fees"><!--<span class="value">70</span>-->УЛИЧНОЕ РАДИО!</div>
+                            </div>
+
+                            <div class="pricing-content">
+                                <ul>
+                                    <li>Уникальный и экономный вид рекламы!</li>
+                                    <li>В оживленных местах по всему городу</li>
+                                    <!--<li>One Page Scroll-Down Layout</li>
+                                    <li>Bootstrap Framework</li>
+                                    <li>Pricing is for 5 Vert</li>
+                                    <li>CSS3 & jQuery Powered</li>-->
+                                </ul>
+                            </div>
+
+                            <div class="pricing-footer"><a class="btn btn-primary" href="#contact">ЗАКАЗАТЬ!</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="pricing-box ultimate-price text-center">
+                            <div class="pricing-head">
+                                <div class="pricing-plan">Прямое попадание в цель</div>
+
+                                <div class="fees"><!--<span class="value">90</span>-->РЕКЛАМА НА ГЕРЦ!
+                                </div>
+                            </div>
+
+                            <div class="pricing-content">
+                                <ul>
+                                    <li>100% гарантия привлечения прямого клиента</li>
+                                    <li>Самая читаемая реклама! Долгосрочно</li>
+                                    <!--<li>One Page Scroll-Down Layout</li>
+                                    <!--<li>Bootstrap Framework</li>
+                                    <li>Pricing is for 5 Vert</li>
+                                    <li>CSS3 & jQuery Powered</li>-->
+                                </ul>
+                            </div>
+
+                            <div class="pricing-footer"><a class="btn btn-primary" href="#contact">ЗАКАЗАТЬ!</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="specials" class="pricing">
             <div class="container">
                 <h2 class="heading text-center">Специальные предложения</h2>
                 <div class="row">
@@ -194,23 +288,24 @@ $mArticles = getModel('articles');
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
-              <div class="clients">
+        <div class="clients">
             <div class="container">
                 <ul class="owl-carousel clients-carousel">
                     <?php
                     $banners = getBanners('banners');
-                    if($banners) {
+                    if ($banners) {
                         foreach ($banners as $banner) {
-                            if($banner['url'] != '') echo '<a target="_blank" rel="nofollow" href="/banner/'.$banner['id'].'/">';
+                            if ($banner['url'] != '') echo '<a target="_blank" rel="nofollow" href="/banner/' . $banner['id'] . '/">';
                             ?>
                             <li>
-                                <img class="clients-logo" src="<?=$banner['image']?>" alt="<?=$banner['name']?>" title="<?=$banner['name']?>">
+                                <img class="clients-logo" src="<?= $banner['image'] ?>" alt="<?= $banner['name'] ?>"
+                                     title="<?= $banner['name'] ?>">
                             </li>
                             <?php
-                            if($banner['url'] != '') echo '</a>';
+                            if ($banner['url'] != '') echo '</a>';
                         }
                     }
                     ?>
@@ -225,15 +320,15 @@ $mArticles = getModel('articles');
                     <?php
                     //var_dump($news);
                     $news = $mArticles->getArticlesByCategory(1);
-                    if($news){
-                        foreach ($news as $item){
+                    if ($news) {
+                        foreach ($news as $item) {
                             $url = getFullUrl($item);
                             ?>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="blog-post article-height-main">
-                                    <div class="post-date"><?=$item['date']?></div>
-                                    <h3><a href="<?=$url?>"><?=$item['name']?></a></h3>
-                                    <p><?=string_limit_words(strip_tags($item['content']),50)?></p>
+                                    <div class="post-date"><?= $item['date'] ?></div>
+                                    <h3><a href="<?= $url ?>"><?= $item['name'] ?></a></h3>
+                                    <p><?= string_limit_words(strip_tags($item['content']), 50) ?></p>
                                 </div>
                             </div>
                             <?php
@@ -245,8 +340,6 @@ $mArticles = getModel('articles');
             </div>
         </section>
 
-  
-
 
         <section id="testimonials" class="testimonials parallax dark">
             <div class="container">
@@ -254,13 +347,12 @@ $mArticles = getModel('articles');
                 <ul class="row owl-carousel testimonials-carousel">
                     <?php
                     $reviews = $mArticles->getArticlesByCategory(24);
-                    if($reviews){
-                        foreach ($reviews as $review){
+                    if ($reviews) {
+                        foreach ($reviews as $review) {
                             echo getReviewBlock($review);
                         }
                     }
                     ?>
-
 
                 </ul>
             </div>
@@ -273,15 +365,16 @@ $mArticles = getModel('articles');
                 <ul class="owl-carousel clients-carousel">
                     <?php
                     $banners = getBanners('clients');
-                    if($banners) {
+                    if ($banners) {
                         foreach ($banners as $banner) {
-                            if($banner['url'] != '') echo '<a target="_blank" rel="nofollow" href="/banner/'.$banner['id'].'/">';
+                            if ($banner['url'] != '') echo '<a target="_blank" rel="nofollow" href="/banner/' . $banner['id'] . '/">';
                             ?>
                             <li>
-                                <img class="clients-logo" src="<?=$banner['image']?>" alt="<?=$banner['name']?>" title="<?=$banner['name']?>">
+                                <img class="clients-logo" src="<?= $banner['image'] ?>" alt="<?= $banner['name'] ?>"
+                                     title="<?= $banner['name'] ?>">
                             </li>
                             <?php
-                            if($banner['url'] != '') echo '</a>';
+                            if ($banner['url'] != '') echo '</a>';
                         }
                     }
                     ?>
@@ -292,7 +385,7 @@ $mArticles = getModel('articles');
         <section id="portfolio" class="portfolio">
             <div class="container-fluid">
                 <div class="blog-post">
-                    <?=getOption('seo-text-main')?>
+                    <?= getOption('seo-text-main') ?>
                 </div>
             </div>
         </section>
@@ -309,39 +402,44 @@ $mArticles = getModel('articles');
                         <div class="contact-form contact-box">
                             <h3>Написать нам</h3>
                             <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Ваше имя" id="form_name" class="form-control">
+                                <form method="post" id="form-contact-us" onsubmit="return false;">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Ваше имя" id="form_name"
+                                                   class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Email" id="form_email" class="form-control">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Email" id="form_email" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Телефон" id="form_tel" class="form-control">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Телефон" id="form_tel" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Тема" id="form_subject" class="form-control">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Тема" id="form_subject"
+                                                   class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <textarea placeholder="Сообщение" id="form_message" class="form-control"></textarea>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                        <textarea placeholder="Сообщение" id="form_message"
+                                                  class="form-control"></textarea>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <input type="submit" value="Отправить" id="form_send" class="btn btn-primary">
-                                </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input type="submit" value="Отправить" id="form_send" class="btn btn-primary">
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-5 col-sm-5 col-xs-12">
-                        <?=getOption('main_our_contacts')?>
+                        <?= getOption('main_our_contacts') ?>
                     </div>
                 </div>
             </div>
@@ -351,4 +449,4 @@ $mArticles = getModel('articles');
     <!--========== END OF MAIN CONTENT==========-->
 
     <!-- SLIDER ENDS -->
-<?=getFooter()?>
+<?= getFooter() ?>

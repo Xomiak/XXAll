@@ -45,5 +45,24 @@ $assetsPath = '/application/views/'.$template.'/assets';
                 }
             }
         );
+
+//        Отправка формы обратной связи
+        $('#form_send').click(function () {
+            alert('send');
+            $.ajax({
+                type: 'POST',
+                url: '/ajax/send_mail_form/',
+                async: false,
+                data: $("#form-contact-us").serialize(),
+                success: function(data){
+//                    if(data == 'ok')
+//                        $.fancybox.open('<div class="message"><h2>Ваше сообщение успешно отправлено</h2></div>');
+                    //else
+                        $.fancybox.open('<div class="message"><h2>' + data + '</h2></div>');
+                }
+            });
+
+        });
+//        END***Отправка формы обратной связи
     });
 </script>

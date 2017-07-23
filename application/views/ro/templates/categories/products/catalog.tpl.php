@@ -12,6 +12,7 @@
                         <img src="<?=$category['image']?>" alt="<?=$category['name']?>" class="article-img" />
                     <?php } ?>
                     <?=$category['short_content']?>
+                    <?=$category['seo']?>
 
                 </div>
             </div>

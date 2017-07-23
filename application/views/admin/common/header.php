@@ -1,5 +1,5 @@
 </head>
-<body class="infobar-offcanvas">
+<body class="infobar-offcanvas sidebar-scroll">
 
 <div id="headerbar">
 	<div class="container-fluid">

@@ -23,19 +23,19 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
  //vdd(SITE);
-if(SITE == 'ro') {
-    $db['default']['username'] = 'umhh_ro';
-    $db['default']['database'] = 'umhh_ro';
-}
-elseif(SITE == 'bp') {
-    $db['default']['username'] = 'umhh_bp';
-    $db['default']['database'] = 'umhh_bp';
-}
-
-elseif(SITE == 'autobus') {
-    $db['default']['username'] = 'umhh_autobus';
-    $db['default']['database'] = 'umhh_autobus';
-}
+//if(SITE == 'ro') {
+//    $db['default']['username'] = 'umhh_ro';
+//    $db['default']['database'] = 'umhh_ro';
+//}
+//elseif(SITE == 'bp') {
+//    $db['default']['username'] = 'umhh_bp';
+//    $db['default']['database'] = 'umhh_bp';
+//}
+//
+//elseif(SITE == 'autobus') {
+//    $db['default']['username'] = 'umhh_autobus';
+//    $db['default']['database'] = 'umhh_autobus';
+//}
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

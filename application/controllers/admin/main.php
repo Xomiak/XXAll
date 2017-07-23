@@ -27,7 +27,8 @@ class Main extends CI_Controller
         //$data['modules'] = $this->modules->getModulesByLogin(userdata('login'));
         //vdd("asd");
         $data['title'] = "Главная";
-        $data['main'] = $this->ma->getMain();
+        //$data['main'] = $this->ma->getMain();
+        $data['main'] = false;
 
         $data['head'] = $this->load->view('common/head.php',$data, true);
         $data['header'] = $this->load->view('common/header.php',$data, true);

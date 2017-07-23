@@ -5,6 +5,12 @@ if (!defined('BASEPATH'))
 // Подключение и вызов первоочередных необходимых функций
 function beforeOutput()
 {
+    if(isset($_GET['clear']) && $_GET['clear'] == 'true'){
+        unset_userdata('beforeOutput');
+        $url = request_uri(true, true);
+        redirect($url);
+    }
+
     check_redirects();
     initLanguages();    // инициализируем языки
 
@@ -19,46 +25,46 @@ function beforeOutput()
         //ajaxInitLanguages();
 
         // Получаем значения, которые будем часто использовать
-        $GLOBALS['site_name'] = userdata('site_name');
-        if(!$GLOBALS['site_name']) {
+        //$GLOBALS['site_name'] = userdata('site_name');
+        //if(!$GLOBALS['site_name']) {
             $GLOBALS['site_name'] = getOption('site_name');
             set_userdata('site_name', $GLOBALS['site_name']);
-        }
-        $GLOBALS['breadcrumb_separator'] = userdata('breadcrumb_separator');
-        if(!$GLOBALS['breadcrumb_separator']) {
+        //}
+        ///$GLOBALS['breadcrumb_separator'] = userdata('breadcrumb_separator');
+        //if(!$GLOBALS['breadcrumb_separator']) {
             $GLOBALS['breadcrumb_separator'] = getOption('breadcrumb_separator');
             set_userdata('breadcrumb_separator', $GLOBALS['breadcrumb_separator']);
-        }
+        //}
 
-        $GLOBALS['site_name'] = userdata('site_name');
-        if(!$GLOBALS['site_name']) {
+        ///$GLOBALS['site_name'] = userdata('site_name');
+        //if(!$GLOBALS['site_name']) {
             $GLOBALS['site_name'] = getOption('site_name');
             set_userdata('site_name', $GLOBALS['site_name']);
-        }
+        //}
 
-        $GLOBALS['site_name'] = userdata('site_name');
-        if(!$GLOBALS['site_name']) {
+        //$GLOBALS['site_name'] = userdata('site_name');
+        //if(!$GLOBALS['site_name']) {
             $GLOBALS['site_name'] = getOption('site_name');
             set_userdata('site_name', $GLOBALS['site_name']);
-        }
+        //}
 
-        $GLOBALS['site_name'] = userdata('site_name');
-        if(!$GLOBALS['site_name']) {
+        //$GLOBALS['site_name'] = userdata('site_name');
+        //if(!$GLOBALS['site_name']) {
             $GLOBALS['site_name'] = getOption('site_name');
             set_userdata('site_name', $GLOBALS['site_name']);
-        }
+        //}
 
-        $GLOBALS['logo'] = userdata('logo');
-        if(!$GLOBALS['logo']) {
+        //$GLOBALS['logo'] = userdata('logo');
+        //if(!$GLOBALS['logo']) {
             $GLOBALS['logo'] = getOption('logo');
             set_userdata('logo', $GLOBALS['logo']);
-        }
+        //}
 
-        $GLOBALS['comments_on'] = userdata('comments_on');
-        if(!$GLOBALS['comments_on']) {
+        //$GLOBALS['comments_on'] = userdata('comments_on');
+        //if(!$GLOBALS['comments_on']) {
             $GLOBALS['comments_on'] = getOption('comments_on');
             set_userdata('comments_on', $GLOBALS['comments_on']);
-        }
+        //}
 
         $GLOBALS['template'] = TEMPLATE;
 
